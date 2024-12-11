@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --custom-background: #F9F1F0;
+    --custom-primary: #FADCD9;
+    --custom-secondary: #F8AFA6;
+    --custom-text: #000000;
+  }
+
+  @font-face {
+    font-family: customFont;
+    src: url(../assets/fonts/gilroy-light-webfont.woff) format('woff');
+    font-style: normal;
+    
+  }
+  @font-face {
+    font-family: customFontBold;
+    src: url(../assets/fonts/gilroy-bold-webfont.woff) format('woff');
+    font-style: normal;
+  }
+  @font-face {
+    font-family: customFontItalic;
+    src: url(../assets/fonts/gilroy-lightitalic-webfont.woff) format('woff');
+    font-style: normal;
+  }
+
+  .scroll-none {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+
+  .scroll-none::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
