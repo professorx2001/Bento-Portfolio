@@ -554,6 +554,89 @@ video {
   display: none;
 }
 
+/* For all anchor tags */
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  /* Inherit color from the text */
+  transform: scaleX(0);
+  /* Start invisible */
+  transition: transform 0.2s ease-in-out;
+  /* Smooth transition */
+}
+
+/* On hover, the effect should be applied */
+
+a:hover::after {
+  background-image: linear-gradient(
+      to right,
+      var(--custom-primary),
+      var(--custom-text),
+      var(--custom-secondary)
+    );
+  transform: scaleX(1);
+}
+
+div{
+  transition: transform 0.3s ease-in-out;
+}
+
+div:hover{
+  transform: scale(0.9);
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  /* Simulates the cursor */
+  padding-right: 5px;
+  animation: typing 2s steps(13) 0.7s 1 forwards, blink 0.7s linear infinite 3s, stopBlinking 0s 4s forwards;
+}
+
+/* Typing animation */
+
+@keyframes typing {
+  from {
+    width: 0%;
+    /* Start with no text */
+  }
+
+  to {
+    width: 13ch;
+    /* Length of the text to reveal */
+  }
+}
+
+/* Cursor blinking animation */
+
+@keyframes blink {
+  50% {
+    border-right-color: transparent;
+    /* Makes the cursor disappear halfway */
+  }
+}
+
+/* Stop blinking */
+
+@keyframes stopBlinking {
+  to {
+    border-right-color: transparent;
+  }
+}
+
 .container {
   width: 100%;
 }
@@ -687,6 +770,14 @@ video {
   flex-grow: 1;
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform-none {
+  transform: none;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -743,11 +834,6 @@ video {
 
 .bg-\[var\(--custom-secondary\)\] {
   background-color: var(--custom-secondary);
-}
-
-.bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
 }
 
 .object-cover {
@@ -854,16 +940,16 @@ video {
 }
 
 :root {
-  --custom-background: #F9F1F0;
-  --custom-primary: #FADCD9;
-  --custom-secondary: #F8AFA6;
+  --custom-background: #f9f1f0;
+  --custom-primary: #fadcd9;
+  --custom-secondary: #f8afa6;
   --custom-text: #000000;
 }
 
 @font-face {
   font-family: customFont;
 
-  src: url(../assets/fonts/gilroy-light-webfont.woff) format('woff');
+  src: url(../assets/fonts/gilroy-light-webfont.woff) format("woff");
 
   font-style: normal;
 }
@@ -871,7 +957,7 @@ video {
 @font-face {
   font-family: customFontBold;
 
-  src: url(../assets/fonts/gilroy-bold-webfont.woff) format('woff');
+  src: url(../assets/fonts/gilroy-bold-webfont.woff) format("woff");
 
   font-style: normal;
 }
@@ -879,21 +965,23 @@ video {
 @font-face {
   font-family: customFontItalic;
 
-  src: url(../assets/fonts/gilroy-lightitalic-webfont.woff) format('woff');
+  src: url(../assets/fonts/gilroy-lightitalic-webfont.woff) format("woff");
 
   font-style: normal;
 }
 
-.scroll-none {
-  scrollbar-width: none;
-  /* For Firefox */
-  -ms-overflow-style: none;
-  /* For Internet Explorer and Edge */
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: var(--custom-secondary);
 }
 
-.scroll-none::-webkit-scrollbar {
-  display: none;
-  /* For Chrome, Safari, and Opera */
+::-webkit-scrollbar-thumb{
+  background-color: var(--custom-text);
+}
+
+#navbar, #container {
+  transition: none;
+  transform: none;
 }
 
 @media (min-width: 640px) {
@@ -1091,3 +1179,5 @@ video {
     line-height: 1;
   }
 }
+
+
