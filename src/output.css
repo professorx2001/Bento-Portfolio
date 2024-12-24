@@ -949,7 +949,7 @@ div:hover{
 @font-face {
   font-family: customFont;
 
-  src: url(../assets/fonts/gilroy-light-webfont.woff) format("woff");
+  src: url(../assets/fonts/gilroy-light-webfont.woff2) format("woff2");
 
   font-style: normal;
 }
@@ -957,7 +957,7 @@ div:hover{
 @font-face {
   font-family: customFontBold;
 
-  src: url(../assets/fonts/gilroy-bold-webfont.woff) format("woff");
+  src: url(../assets/fonts/gilroy-bold-webfont.woff2) format("woff2");
 
   font-style: normal;
 }
@@ -965,7 +965,7 @@ div:hover{
 @font-face {
   font-family: customFontItalic;
 
-  src: url(../assets/fonts/gilroy-lightitalic-webfont.woff) format("woff");
+  src: url(../assets/fonts/gilroy-lightitalic-webfont.woff2) format("woff2");
 
   font-style: normal;
 }
