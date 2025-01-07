@@ -17,9 +17,13 @@
   --custom-background: #f9f1f0;
   --custom-primary: #fadcd9;
   --custom-secondary: #f8afa6;
-  --custom-text: #000000;
-}
+  --custom-text: #000000; 
 
+  --custom-dark-background: #181C14;
+  --custom-dark-primary: #697565;
+  --custom-dark-secondary: #3C3D37;
+  --custom-dark-text: #ECDFCC; 
+}
 
 
 
