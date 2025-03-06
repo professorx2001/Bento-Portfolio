@@ -45,6 +45,11 @@
         "desc": "A simple tool designed to create secure and unique passwords for improved online safety. It generates passwords using a combination of uppercase and lowercase letters, numbers, and special characters based on user-defined preferences like length and character types."
     },
     {
+        "name": "To Do List ( React )",
+        "url": "https://github.com/professorx2001/ToDo-React",
+        "desc": "A simple and interactive to-do list application built with React. It allows users to add, edit, delete, and mark tasks as completed while saving data in local storage for persistence. The app features a clean and intuitive user interface for efficient task management."
+    },
+    {
         "name": "To Do List ( JS )",
         "url": "https://todolistplanx.netlify.app",
         "desc": "A simple application that helps users manage tasks efficiently. It allows users to add new tasks, delete completed or unwanted tasks, and ensures data persistence by storing the tasks locally on the user's device."
